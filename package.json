@@ -1,0 +1,179 @@
+{
+  "project_name": "Mini Code Mentor",
+  "design_philosophy": {
+    "persona": "E1: The Anti-AI Designer",
+    "core_principles": [
+      "Tactical Precision: Every pixel has a purpose.",
+      "Immersion First: The IDE is a cockpit, not a document.",
+      "Information Density: High density but high clarity.",
+      "Motion with Meaning: Animations signal state changes, not decoration."
+    ],
+    "anti_patterns": [
+      "Standard Bootstrap Grids",
+      "Generic 'SaaS Blue' Gradients",
+      "Oversized Cards with no content",
+      "Pure Black (#000000) Backgrounds (Use Zinc-950 instead)"
+    ]
+  },
+  "theme": {
+    "mode": "dark",
+    "strategy": "The 'Orbital Command' Look - Deep space backgrounds with high-contrast HUD elements."
+  },
+  "typography": {
+    "fonts": {
+      "headings": {
+        "family": "Sora, sans-serif",
+        "weights": ["400", "600", "700"],
+        "usage": "Use for all major section headers and modal titles. Tracking tight (-0.02em)."
+      },
+      "body": {
+        "family": "Manrope, sans-serif",
+        "weights": ["400", "500"],
+        "usage": "Use for all UI elements, labels, and descriptions."
+      },
+      "code": {
+        "family": "JetBrains Mono, monospace",
+        "weights": ["400", "500"],
+        "usage": "MANDATORY for all code editors, snippets, and terminal outputs."
+      }
+    },
+    "scale": {
+      "h1": "text-4xl md:text-5xl font-bold tracking-tight",
+      "h2": "text-3xl font-semibold tracking-tight",
+      "h3": "text-2xl font-medium",
+      "body_lg": "text-lg leading-relaxed",
+      "body_base": "text-base leading-normal",
+      "body_sm": "text-sm text-muted-foreground",
+      "caption": "text-xs uppercase tracking-wider text-muted-foreground"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#09090b",
+      "foreground": "#fafafa",
+      "card": "#18181b",
+      "card_foreground": "#fafafa",
+      "popover": "#09090b",
+      "popover_foreground": "#fafafa",
+      "primary": "#3b82f6",
+      "primary_foreground": "#ffffff",
+      "secondary": "#27272a",
+      "secondary_foreground": "#fafafa",
+      "muted": "#27272a",
+      "muted_foreground": "#a1a1aa",
+      "accent": "#27272a",
+      "accent_foreground": "#fafafa",
+      "destructive": "#ef4444",
+      "destructive_foreground": "#fafafa",
+      "border": "#27272a",
+      "input": "#27272a",
+      "ring": "#3b82f6"
+    },
+    "special_tokens": {
+      "ai_glow": "0 0 20px rgba(168, 85, 247, 0.4)",
+      "error_glow": "0 0 15px rgba(239, 68, 68, 0.3)",
+      "success_glow": "0 0 15px rgba(34, 197, 94, 0.3)",
+      "glass_panel": "rgba(9, 9, 11, 0.7)"
+    }
+  },
+  "layout_strategy": {
+    "container": "w-full max-w-[1920px] mx-auto",
+    "spacing": {
+      "section_gap": "gap-8",
+      "component_gap": "gap-4",
+      "internal_padding": "p-4 md:p-6"
+    },
+    "grid_system": {
+      "dashboard": "grid grid-cols-1 md:grid-cols-12 gap-6",
+      "ide_layout": "flex h-screen overflow-hidden",
+      "bento_grid": "grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[minmax(180px,auto)]"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300",
+      "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+      "ghost": "hover:bg-accent hover:text-accent-foreground",
+      "icon": "h-9 w-9 p-0 rounded-md"
+    },
+    "cards": {
+      "default": "bg-card border border-border/50 rounded-xl shadow-sm hover:border-primary/50 transition-colors duration-300",
+      "glass": "bg-black/40 backdrop-blur-xl border border-white/10 rounded-xl",
+      "interactive": "cursor-pointer hover:scale-[1.01] transition-transform duration-200"
+    },
+    "inputs": {
+      "default": "bg-input/50 border-transparent focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200"
+    },
+    "panels": {
+      "ide_sidebar": "w-16 flex flex-col items-center py-4 border-r border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60",
+      "ide_main": "flex-1 relative",
+      "ide_output": "h-64 border-t border-border bg-black/50"
+    }
+  },
+  "visual_enhancers": {
+    "effects": [
+      {
+        "name": "Scanline Overlay",
+        "css": "pointer-events-none fixed inset-0 z-50 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%] opacity-10"
+      },
+      {
+        "name": "Glow Borders",
+        "css": "border border-white/10 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)]"
+      }
+    ],
+    "animations": {
+      "hover_lift": "hover:-translate-y-1 transition-transform duration-300 ease-out",
+      "fade_in": "animate-in fade-in duration-500",
+      "slide_up": "animate-in slide-in-from-bottom-4 duration-500"
+    }
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "background",
+        "description": "Abstract code background for landing/login",
+        "url": "https://images.unsplash.com/photo-1753998943228-73470750c597?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGN5YmVyJTIwdGVjaG5vbG9neSUyMGJhY2tncm91bmQlMjBkYXJrJTIwbW9kZXxlbnwwfHx8fDE3NzIyNjk2ODJ8MA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "category": "hero",
+        "description": "Neon abstract lines for high-impact hero sections",
+        "url": "https://images.unsplash.com/photo-1764258560078-fe9909b3da5c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGN5YmVyJTIwdGVjaG5vbG9neSUyMGJhY2tncm91bmQlMjBkYXJrJTIwbW9kZXxlbnwwfHx8fDE3NzIyNjk2ODJ8MA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "category": "user",
+        "description": "Professional developer avatar",
+        "url": "https://images.unsplash.com/photo-1758534063829-a72058381e21?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0JTIwZGFyayUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzcyMjY5Njk2fDA&ixlib=rb-4.1.0&q=85"
+      }
+    ],
+    "icons": {
+      "library": "lucide-react",
+      "style": "stroke-[1.5px] w-5 h-5"
+    }
+  },
+  "accessibility": {
+    "contrast": "Ensure minimum 4.5:1 for text. Use text-shadow on images.",
+    "focus": "focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+    "reduced_motion": "motion-reduce:transition-none motion-reduce:animate-none"
+  },
+  "implementation_plan": {
+    "steps": [
+      "Setup Tailwind theme colors and fonts in tailwind.config.js",
+      "Install required fonts (@fontsource/sora, @fontsource/manrope, @fontsource/jetbrains-mono)",
+      "Create Layout components (Sidebar, IDE Workspace, Panel Resizers)",
+      "Integrate Monaco Editor with custom dark theme",
+      "Build AI Chat interface with glassmorphism",
+      "Implement Voice Control visualizers (waveform animation)",
+      "Ensure all inputs have aria-labels and data-testid attributes"
+    ]
+  },
+  "universal_guidelines": [
+    "Do not use generic gradients.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "Every interaction needs micro-animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "All interactive elements MUST include data-testid attribute.",
+    "Use sonner for toasts.",
+    "Export components as named exports.",
+    "Pages use default exports."
+  ]
+}
